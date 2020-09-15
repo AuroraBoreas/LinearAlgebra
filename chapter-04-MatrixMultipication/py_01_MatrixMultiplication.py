@@ -10,17 +10,17 @@ class Matrix(Vector):
     def __add__(self, other):
         pass
     def __mul__(self, other):
-        i = Vector(self.a, self.b)
-        j = Vector(self.c, self.d)
+        _i = Vector(self.a, self.b)
+        _j = Vector(self.c, self.d)
 
-        _v1 = i * other.a
-        _v2 = j * other.b
-        _v3 = i * other.c
-        _v4 = j * other.d
+        _v1 = _i * other.a
+        _v2 = _j * other.b
+        _v3 = _i * other.c
+        _v4 = _j * other.d
 
-        I = _v1 + _v2
-        J = _v3 + _v4
-        return Matrix(I.x, I.y, J.x, J.y)
+        _I = _v1 + _v2
+        _J = _v3 + _v4
+        return Matrix(_I.x, _I.y, _J.x, _J.y)
 
 
 m1 = Matrix(0, 1, 2, 0)
